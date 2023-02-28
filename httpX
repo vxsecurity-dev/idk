@@ -1,0 +1,17 @@
+ulimit -n 1000000
+echo -e "\e[1;36m  使用方法./httpX 参数: 模式: 线程: 目标: 时间: 速率:\e[0m"
+echo -e "\e[1;36m  使用日志： \e[0m"
+echo -e "\e[1;36m  参数:$1  \e[0m"
+echo -e "\e[1;36m  模式:$2  \e[0m"
+echo -e "\e[1;36m  线程:$3 \e[0m"
+echo -e "\e[1;36m  目标:$4  \e[0m"
+echo -e "\e[1;36m  时间:$5  \e[0m"
+echo -e "\e[1;36m  速率:$6  \e[0m"
+echo -e "\e[1;36m  代理:proxy.txt  \e[0m"
+echo -e "\e[1;36m  UA表:ua.txt  \e[0m"
+echo -e "\e[1;36m  线程建议50 如果机器好一点的话那就100 怕拉太大死机\e[0m"
+echo -e "\e[1;36m  BY:Wiler. Telegram定制@WilerHttpCC\e[0m"
+for i in $(seq $1);
+do
+    node Httpcfx.js $2 $3 $4 $5 $6 &
+done
